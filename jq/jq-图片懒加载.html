@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        margin-top: 300px;
+        width: 470px;
+        height: 150px;
+        border: 1px solid #000;
+    }
+    </style>
+</head>
+<body>
+    <div><img _src="img/1.jpg"></div>
+    <div><img _src="img/2.jpg"></div>
+    <div><img _src="img/3.jpg"></div>
+    <div><img _src="img/4.jpg"></div>
+    <div><img _src="img/5.jpg"></div>
+
+<script src="jquery.js"> </script> 
+<script>
+toChange()
+$(document).scroll(toChange);
+function toChange(){
+    $('img').each(function(index,item){
+        if($(item).offset().top<$(window).height()+$(document).scrollTop()){
+            $(item).attr('src',$(item).attr('_src'))
+        }
+    })
+}
+</script>
+</body>
+</html>

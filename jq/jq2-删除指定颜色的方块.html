@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        float: left;
+        margin: 30px 10px;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+
+    }
+    span{
+        margin: 0 10px;
+    }
+    
+</style>
+<body>
+    <span>red</span>
+    <span>blue</span>
+    <span>green</span>
+    <span>orange</span>
+    <br/>
+    <button>清空红色</button>
+    <br/>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+   
+    <script src="jquery.js"> </script>
+    <script>
+        var color="";
+     $('span').click(function(){
+        color=$(this).html()
+     })
+     $('div').click(function(){
+         $(this).css('background',color)
+     })
+     $('button').click(function(){
+         $('div[style*=red]').css('background','')
+     })
+    </script>
+</body>
+</html>

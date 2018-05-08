@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+
+#div1{ width:100px; height:100px; background:red; position:absolute; left:100px; top:100px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//trigger() : 主动触发
+
+$(function(){
+	
+	
+	$('div').on('click.def',function(){
+		alert(1);
+	});
+	
+	$('div').on('click.abc',function(){
+		alert(2);
+	});
+	
+	$('div').trigger('click.abc');
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div>div</div>
+</body>
+</html>

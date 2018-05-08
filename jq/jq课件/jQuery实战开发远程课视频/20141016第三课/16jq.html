@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#div1{ width:100px; height:100px; background:red; position:absolute; left:100px; top:100px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//在JQ中的事件操作都是绑定的形式
+
+$(function(){
+	
+	var disX = 0;
+	var disY = 0;
+	var $div = $('#div1');
+	
+	$div.on('mousedown',function(ev){
+		
+		disX = ev.pageX - $(this).offset().left;
+		disY = ev.pageY - $(this).offset().top;
+		
+		$(document).on('mousemove.drag',function(ev){
+			
+			$div.css('left',ev.pageX - disX);
+			$div.css('top',ev.pageY - disY);
+			
+		});
+		
+		$(document).on('mouseup.drag',function(){
+			
+			$(this).off('.drag');
+			
+		});
+		
+		return false;
+		
+	});
+	
+	
+	
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">div</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#div1{ width:100px; height:100px; background:red; position:absolute; left:100px; top:100px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+
+//$().css();   $().html();   $().click();  //都是针对JQ对象的  
+
+//$.xxx();   $.yyy();   $.zzz();   //工具方法，即可以给JQ对象用，也可以给原生JS用
+
+$(function(){
+	
+	/*var a = {
+		name : "hello"
+	};
+	
+	var b = a;
+	b.name = 'hi';
+	
+	alert( a.name );  //视频 : 对象引用*/
+	
+	/*var a = {
+		name : "hello"
+	};
+	
+	var b = {};
+	
+	$.extend( b , a , {age:20} );
+	
+	console.log(b);
+	
+	b.name = 'hi';
+	
+	alert( a.name );*/
+	
+	var a = {
+		name : {age:20}
+	};
+	
+	var b = {};
+	
+	$.extend( true , b , a );  //默认是浅拷贝的  , true代表深考虑
+	
+	b.name.age = 30;
+	
+	alert( a.name.age );
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">div</div>
+
+</body>
+</html>

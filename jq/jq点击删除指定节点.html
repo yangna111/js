@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>ssss<span>bbb</span></li>
+        <li>ssss<span>bbb</span></li>
+        <li>ssss<span>bbb</span></li>
+        <li>ssss<span>bbb</span></li>
+    </ul>
+<script src="jquery.js"> </script>
+<script>
+    $('span').click(function(){
+        $(this).closest('li').css('background','red')
+    })
+</script>
+</body>
+</html>

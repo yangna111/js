@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <input type="radio" value="管理员" name="user" checked/>管理员
+   <input type="radio" value="普通用户" name="user"/>普通用户
+   <br/>
+   <a href="#"></a><span id="span">编辑此处</span></a>
+<script src="jquery.js"> </script> 
+<script>
+$('input').click(function(){
+    if($(this).val()=='管理员'){
+        $('#span').wrap('<a href="#"></a>')
+    }else if($(this).val()=='普通用户'){
+        $('#span').unwrap()
+    }
+})
+</script>
+</body>
+</html>

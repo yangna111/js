@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#div1{ }
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//在JQ中的事件操作都是绑定的形式
+
+$(function(){
+	
+	$('#div1').click(function(){
+		
+		$('#span1').off('click').click(function(){
+			alert(1);
+		});
+		
+	});
+	
+	
+	
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">div</div>
+<span id="span1"> span </span>
+</body>
+</html>

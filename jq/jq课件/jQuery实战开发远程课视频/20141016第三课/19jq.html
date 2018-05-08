@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#div1{ width:100px; height:100px; background:red; position:absolute; left:100px; top:100px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+
+//$().css();   $().html();   $().click();  //都是针对JQ对象的  
+
+//$.xxx();   $.yyy();   $.zzz();   //工具方法，即可以给JQ对象用，也可以给原生JS用
+
+$(function(){
+	
+	//$.proxy() : 改this指向
+	
+	
+	function show(n1,n2){
+		alert(n1);
+		alert(n2);
+		alert(this);
+	}
+	
+	//show();  
+	//show.call( document );
+	
+	//$.proxy( show , document ,3)(4);
+	
+	//$(document).on('click', $.proxy(show,window,3,4) );
+	
+	
+	$('#div1').on('click',function(){
+		
+		var This = this;
+		
+		setTimeout(function(){
+			
+			$(This).css('background','yellow');
+			
+		},1000);
+		
+	});
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">div</div>
+
+</body>
+</html>

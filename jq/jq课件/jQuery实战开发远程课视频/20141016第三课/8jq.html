@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//在JQ中的事件操作都是绑定的形式
+
+$(function(){
+	
+	/*$('#div1').click(function(){
+		alert(1);
+	});
+	$('#div1').click(function(){
+		alert(2);
+	});*/
+	
+	/*$('#div1').on('click mouseover',function(){
+		alert(123);
+	});*/
+	
+	/*$('#div1').on('click mouseover',function(){
+		alert(123);
+		//$(this).off();  //删除所有的事件操作
+		
+		$(this).off('mouseover');
+		
+	});*/
+	
+	$('#div1').click(function(){
+		alert(1);
+		$(this).off();
+	});
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">aaaaaaaaaaaaaa</div>
+</body>
+</html>

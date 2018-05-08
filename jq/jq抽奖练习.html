@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+            width: 98px;
+            height: 98px;
+            float: left;
+            border: 1px solid black;  
+            text-align: center;
+             line-height: 98px;   
+             margin-right: 5px;  
+        }
+       
+        ul{
+            width: 320px;
+            height: 300px;
+           
+        }
+        .red{
+            background: red;
+        }
+    </style>
+  
+</head>
+<body>
+    <input type="button" value="抽奖"/>
+    <ul>
+        <li class="red">1等奖</li>
+        <li>2等奖</li>
+        <li>3等奖</li>
+        <li>4等奖</li>
+        <li>5等奖</li>
+        <li>6等奖</li>
+        <li>7等奖</li>
+        <li>8等奖</li>
+        <li>9等奖</li>
+    </ul>
+   
+<script src="jquery.js"> </script>
+<script>
+    var iNow=0;
+  $('input').click(function(){
+    var step=parseInt(Math.random()*20+5);
+    var timer=setInterval(function(){
+        $('li').attr('class','');
+        $('li').eq(iNow).attr('class','red');
+        iNow++;
+        step--;
+        if(step==0){
+            clearInterval(timer);
+            alert('您抽到了:'+$('li[class=red]').html());
+           
+        }
+        if(iNow==$('li').length){
+            iNow=0
+
+        }
+    },100)
+  })
+
+</script>
+</body>
+</html>

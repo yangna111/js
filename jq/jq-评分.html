@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 20px 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+<script src="jquery.js"> </script>
+<script>
+    var btn=true; //一个开关  用来点击之后就可以在来操作
+    $('li').mouseover(function(){      
+        if(btn){
+            var index=$(this).index();//获取当前元素的下标 
+            $('li').each(function(i,item){
+                if(index>=i){
+                    $(item).css('background','blue')
+                    console.log(index,i)
+                
+                }else{
+                    $(item).css('background','red')
+                    
+                }
+            })
+
+        }
+    }).mouseout(function(){
+        if(btn){
+            $('li').css('background','red')
+        }
+    })
+
+    $('li').click(function(){
+        btn=false
+    })
+    
+</script> 
+</body>
+</html>

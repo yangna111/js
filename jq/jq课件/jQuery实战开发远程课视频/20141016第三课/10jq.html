@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{ margin:0; padding:0;}
+#div1{ margin:200px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//在JQ中的事件操作都是绑定的形式
+
+$(function(){
+	
+	/*$(document).keydown(function(ev){
+		
+		//alert( ev.which );
+		
+		//alert( ev.ctrlKey );
+		
+	});*/
+	
+	/*$(document).click(function(ev){
+		//ev.target : 事件源 : 视频 : 事件委托
+		alert(ev.target);
+		
+	});*/
+	
+	
+	$(document).click(function(ev){
+		alert(123);
+	});
+	
+	$('#div1').click(function(ev){
+		//alert(123);
+		ev.stopPropagation();
+	});
+	
+	$(document).contextmenu(function(ev){
+		ev.preventDefault();
+		return false;    //阻止默认事件和冒泡
+	});
+	
+});
+
+</script>
+</head>
+
+<body style="height:2000px;">
+<div id="div1">aaaaaaaaaaaaaa</div>
+</body>
+</html>

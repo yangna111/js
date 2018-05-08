@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; display:none;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	//alert( $('#div1').get(0).offsetWidth );   //原生JS是获取不到隐藏元素的尺寸
+	
+	alert( $('#div1').width() );  //JQ是可以获取隐藏元素的尺寸
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">div</div>
+</body>
+</html>

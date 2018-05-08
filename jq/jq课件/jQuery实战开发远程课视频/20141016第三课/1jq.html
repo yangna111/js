@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; padding:10px; border:1px #000 solid; margin:5px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	//alert( $('#div1').width() );   //width
+	
+	//alert( $('#div1').innerWidth() );  //width + padding 
+	
+	//alert( $('#div1').outerWidth() );  //width + padding + border
+	
+	//alert( $('#div1').outerWidth(true) );  //width + padding + border + margin
+	
+	//$('#div1').width(200);
+	
+	//$('#div1').innerWidth(200);   //width : 200 - padding
+	
+	//$('#div1').outerWidth(200);     //width : 200 - padding - border
+	
+	$('#div1').outerWidth(200,true);   //width : 200 - padding - border - margin
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">div</div>
+</body>
+</html>
