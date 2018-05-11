@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+		$.get('user3.php',{name:"hello"},function(data){
+			console.log(data);
+		},'xml').error(function(err){
+			console.log(err);
+		});
+		
+		
+	
+});
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form>
+            <input type="text" name="user" id="user">
+            <input type="submit" value="注册">
+        </form>
+        <div id="div1"></div>
+<script src="jquery.js"></script>
+<script>
+    $('#user').on('input',function(){
+        $.ajax({
+            url:'user.php',
+            data:{user:$(this).val()},
+            success:function(data){
+                if(data==1){
+                    $('#div1').html('可以注册');
+                }else if(data==0){
+                    $('#div1').html('已经注册过了，不能注册了')
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

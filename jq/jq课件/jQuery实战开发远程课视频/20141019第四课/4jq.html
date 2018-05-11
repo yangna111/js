@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red;}
+#div2{ width:200px; height:200px; background:red; margin-top:10px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//animate() : 
+//第一个参数 : 对象 {} 去设置样式属性和值(目标点)
+//第二个参数 : 时间 默认是400
+//第三个参数 : 运动形式 只有两种 swing(默认 : 缓冲 : 慢快慢)  linear(匀速的)
+//第四个参数 : 运行结束的回调
+
+$(function(){
+	
+	$('#input1').click(function(){
+		
+		$('#div1').animate({
+			width : '+=100'
+		},1000,'linear');
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<input type="button" value="点击" id="input1">
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

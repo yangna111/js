@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+		$.ajax({
+			url : 'user2.php',
+			data : { user : $(this).val() },
+			dataType : 'xml',
+			success : function(data){   
+			
+				//console.log(data);
+				//console.log( typeof data );
+				
+				//var dataJson = $.parseJSON(data);
+				
+				//console.log( dataJson );
+				//console.log( typeof dataJson );
+				
+				/*console.log(data);
+				console.log( typeof data );
+				
+				var dataDoc = $.parseXML(data);
+				
+				console.log(dataDoc);
+				console.log( typeof dataDoc );*/
+				
+				
+				console.log(data);
+				console.log( typeof data );
+				
+			},
+			error : function(err){
+				console.log(err);
+			}
+		});
+	
+});
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

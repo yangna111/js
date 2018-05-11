@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; position:absolute;}
+#div2{ width:200px; height:200px; background:red; margin-top:10px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+
+$(function(){
+	
+	//$.parseJSON() : 把JSON类型的字符串，转换成真正的JSON数据
+	         
+	/*var a = '{"name":"hello","age":"20"}';
+	
+	var json = $.parseJSON(a);  //只能针对JSON类型的字符串(安全比较好),要是严格的JSON
+	console.log(json);
+	console.log(json.name);*/
+	
+	
+	//$.parseHTML()  : 转化HTML的形式的字符串,转成DOM节点，放到一个数组中
+	
+	/*var a = '<div>div</div><span>span</span>';
+	
+	var arr = $.parseHTML(a);
+	
+	//console.log(arr);
+	
+	arr[1].innerHTML = 'hello';
+	
+	$('body').append( arr[1] );*/
+	
+	//$.parseXML() : 把XML形式的字符串，转成真正的XML节点
+	
+	var a = '<?xml version="1.0" encoding="utf-8"?><hello>nihao</hello>';
+	
+	var xmlDoc = document; 
+	
+	//console.log( xmlDoc );
+	
+	//console.log(  $(xmlDoc).find('hello').html()   );
+	
+	console.log( $.isXMLDoc(xmlDoc) );           
+	
+});
+</script>
+</head>
+
+<body>
+
+
+</body>
+</html>

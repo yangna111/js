@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+		/*$.ajax({
+			url : 'user3.php',
+			async : false,
+			success : function(data){   
+				console.log(data);
+			}
+		});
+		console.log(123);*/
+		
+		var arr = $.ajax({
+			url : 'user3.php',
+			async : false
+		}).responseText;
+		
+		//console.log( arr );
+		
+		arr = eval(arr);
+		
+		arr.push('d');
+		
+		console.log( arr );
+	
+});
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

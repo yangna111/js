@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; position:absolute;}
+#div2{ width:200px; height:200px; background:red; margin-top:10px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//stop() : 清空队列的行为
+
+$(function(){
+	
+	$('#div1').mouseover(function(){
+		
+		$(this).stop().animate({width:200,height:200});
+		
+	}).mouseout(function(){
+		
+		$(this).stop().animate({width:100,height:100});
+		
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+<input type="button" value="点击" id="input1">
+<input type="button" value="停止运动" id="input2">
+<div id="div1"></div>
+
+</body>
+</html>

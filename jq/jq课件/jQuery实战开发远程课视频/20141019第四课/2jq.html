@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//fadeIn :  默认的事件  400
+
+$(function(){
+	var bBtn = true;
+	$('#input1').click(function(){
+		
+		/*if(bBtn){
+			//$('#div1').fadeOut();
+			$('#div1').slideUp(); 
+		}
+		else{
+			//$('#div1').fadeIn();
+			$('#div1').slideDown(); 
+		}*/
+		
+		bBtn =! bBtn;
+		
+		//$('#div1').fadeToggle(1000);
+		$('#div1').slideToggle(1000);
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<input type="button" value="点击" id="input1">
+<div id="div1"></div>
+</body>
+</html>

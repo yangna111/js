@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+//'normal' : 400
+//'fast' : 200
+//'slow' : 600
+//参数可以直接添加时间
+
+$(function(){
+	//var bBtn = true;
+	$('#input1').click(function(){
+		
+		/*if(bBtn){
+			$('#div1').hide('slow');
+		}
+		else{
+			$('#div1').show('fast');
+		}
+		
+		bBtn =! bBtn;*/
+		
+		$('#div1').toggle(1000);
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<input type="button" value="点击" id="input1">
+<div id="div1"></div>
+</body>
+</html>

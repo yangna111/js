@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{margin: 0}
+        .wrap{
+            height: 1000px;
+            position: relative;
+        }
+        .login{
+            padding: 50px;
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            position: fixed;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            display: none;
+        }
+        span{
+            position: absolute;
+            right:5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <input type="button" value="登录" id="box">
+        <div class="login">         
+            用户名： <input type="text">    <span class="close">x</span>
+            <br/>
+            密码： <input type="password">                   
+        </div>
+    </div>
+<script src="jquery.js"></script> 
+<script>
+$('#box').on('click',function(){
+    $('.login').show()
+})
+$('.close').on('click',function(){
+    $('.login').hide()
+})
+</script>   
+</body>
+</html>
