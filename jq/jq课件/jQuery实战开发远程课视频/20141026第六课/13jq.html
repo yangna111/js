@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red; position:relative;}
+#div2{ width:100px; height:100px; background:blue; position:absolute; top:-100px; left:0;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+
+
+/*$(document).ready(function(){
+
+});*/
+
+$(function(){   //等DOM加载完就会执行
+	
+
+	$('img').load(function(){
+		alert($('img').width());	
+	});
+	
+});
+
+$(window).load(function(){   //等整个页面加载完才会执行
+	
+	
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<span id="span1">span</span>
+</div>
+<img src="http://www.miaov.com/2013/img/logo/text.png">
+</body>
+</html>

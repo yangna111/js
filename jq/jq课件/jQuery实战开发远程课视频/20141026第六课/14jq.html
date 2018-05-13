@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red; position:relative;}
+#div2{ width:100px; height:100px; background:blue; position:absolute; top:-100px; left:0;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){ 
+	
+
+	$('#span1').parentsUntil('body').css('border','1px red solid');
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<p>
+		<span id="span1">span</span>
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	//$('#div1').load('data.html .box');
+	
+	$('#div1').click(function(){
+		$.getScript('data.js');
+	});
+	
+	$.getJSON('data.php?callback=?',function(data){
+		console.log(data);
+	}).error(function(err){
+		console.log(err);
+	});                             
+	
+	
+	$.ajax({
+		url : 'data.php?callback=show',
+		context : '#div1',
+		scucess : function(data){
+			'show({})'
+			this
+		},
+		error,function(){},
+		beforeSend : function(){}
+	});
+	
+	
+	$.ajaxSetup({
+		type : 'POST'
+	});                                  
+	
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">aaaa</div>
+</body>
+</html>

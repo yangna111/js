@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){ 
+	
+	//$('div').css({width:'100px',height:'100px',background:'red'});
+	
+	//$('div').on({click:function(){},mouseover:function(){}});
+	
+	$('div').addClass(function(i,oldClass){
+		//console.log(i);
+		//console.log(oldClass);
+		
+		return 'box'+(i+1);
+		
+	});
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<div class="box">div</div>
+<div>div</div>
+<div>div</div>
+</body>
+</html>

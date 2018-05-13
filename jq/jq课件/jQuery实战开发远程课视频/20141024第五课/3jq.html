@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="jquery-ui.min.css">
+<style>
+#div1{ width:100px; height:100px; background:red; position:absolute;}
+.active{ font-size:40px;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script>
+
+$(function(){
+	
+	$('#div1').draggable({
+		cursor : 'move',
+		axis: 'x',
+		handle: 'p'
+		/*start : function(){
+			$(this).css('background','blue');
+		}*/
+	});
+	
+	$('input').click(function(){
+		
+		$('#div1').draggable('destroy');
+		
+	});
+	
+	$('#div1').on('dragstart',function(){
+		$(this).css('background','blue');
+	});
+	
+	$('#accordion').accordion();
+	
+	
+	$('#div1').find('p').addClass('active',1000);
+	
+});
+
+</script>
+</head>
+
+<body>
+
+<div id="accordion">
+    <h3>First header</h3>
+    <div>First content panel</div>
+    <h3>Second header</h3>
+    <div>Second content panel</div>
+    <h3>Second header</h3>
+    <div>Second content panel</div>
+</div>
+
+<div id="div1">
+	<p>aaaaaaaaaa</p>
+</div>
+<input type="button" value="点击">
+
+
+</body>
+</html>

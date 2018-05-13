@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	//'key=value&key=value&key=value'
+	
+	/*var obj = { "name":"hello","age":"20" };
+	
+	obj = $.param( obj );
+	
+	console.log( obj );
+	
+	$.ajax({
+		data : { "name":"hello","age":"20" }
+	});*/
+	
+	
+	
+	//var a = $('form').serialize();  //只是针对form中的name和value的形式
+	
+	/*var a = $('form').serializeArray(); //[{ name:"a", value:"1"},{ name:"b", value:"2"}, { name:"c",value:"3"}]
+	
+	console.log( a );  //a=1&b=2&c=3
+	
+	$.ajax({
+		data : a
+	});*/
+	
+	
+	var obj = [{ name:"hello",value:"20" }];
+	
+	obj = $.param( obj );
+	
+	console.log( obj );
+	
+});
+
+</script>
+</head>
+
+<body>
+<form>
+	<input type="text" name="a" value="1">
+    <input type="text" name="b" value="2">
+    <input type="text" name="c" value="3">
+</form>
+</body>
+</html>

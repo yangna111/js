@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	$('#div1').click(function(){
+		alert(123);
+	});
+	
+	var $div = $('#div1').detach();   //删除元素，但是可以保留元素之前的操作行为
+	
+	$('body').append( $div );
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">div</div>
+<hr>
+</body>
+</html>

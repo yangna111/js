@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){ 
+	
+	/*var a = [1,2,3];
+	var b = [4,5,6];
+	
+	var c = $.merge(a,b);
+	
+	console.log(c);*/
+	
+	
+	/*var arr = ['a','b','c'];
+	
+	arr = $.map(arr,function(val,i){
+		return val + i;
+		//return 'hello';
+	});
+	
+	console.log( arr );*/
+	
+	
+	/*var arr = [1,5,3,8,2];
+	
+	arr = $.grep(arr,function(val,i){
+		return val > 4;
+	});
+	
+	console.log( arr );*/
+	
+	//$.unique() : 只是针对DOM节点的去重方法                    
+	
+	/*var aDiv = $('div').get();
+	
+	var arr = [];
+	
+	for(var i=0;i<aDiv.length;i++){
+		arr.push(aDiv[i]);
+	}
+	for(var i=0;i<aDiv.length;i++){
+		arr.push(aDiv[i]);
+	}
+	
+	console.log(arr);
+	
+	arr = $.unique(arr);
+	
+	console.log(arr);*/
+	
+	//$('div').parents()
+	
+	//$.inArray()  类似于 indexOf()
+	//var arr = ['a','b','c','d'];
+	
+	//console.log($.inArray('b',arr));  //1
+	
+	
+	
+	//$.makeArray() : 转数组的
+	
+	/*var aDiv = document.getElementsByTagName('div');
+	
+	aDiv = $.makeArray(aDiv);
+	
+	aDiv.push();
+	
+	console.log(aDiv);*/
+	
+	var str = '   hello   ';
+	
+	alert( '('+ $.trim(str)+')'  );
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<div class="box">div</div>
+<div>div</div>
+<div>div</div>
+</body>
+</html>

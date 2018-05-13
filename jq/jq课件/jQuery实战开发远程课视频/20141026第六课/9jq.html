@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:200px; height:200px; background:red; position:relative;}
+#div2{ width:100px; height:100px; background:blue; position:absolute; top:-100px; left:0;}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+
+$(function(){
+	
+	/*$('#div1').on('click',{name:"hello"},function(ev){
+		
+		console.log(ev.data.name);
+		
+	});*/
+	
+	$('#div1').on('touchstart',function(ev){
+		
+		alert(ev.originalEvent.changedTouches);
+		
+		
+	});
+	
+	
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<span>span</span>
+</div>
+</body>
+</html>
